@@ -12,7 +12,8 @@ if which brew >/dev/null;then
     brew install vim ctags git astyle
 fi
 
-sudo easy_install -ZU autopep8 
+sudo apt-get install pip3
+pip3 install autopep8 
 sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
 mv -f ~/vim ~/vim_old
 cd ~/ && git clone https://github.com/Skr-Skr/vim.git
@@ -21,9 +22,9 @@ mv -f ~/vim ~/.vim
 mv -f ~/.vimrc ~/.vimrc_old
 mv -f ~/.vim/.vimrc ~/
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-echo "ma6174正在努力为您安装bundle程序" > ma6174
-echo "安装完毕将自动退出" >> ma6174
-echo "请耐心等待" >> ma6174
-vim ma6174 -c "BundleInstall" -c "q" -c "q"
-rm ma6174
+echo "Skr-Skr正在努力为您安装bundle程序" > tmp_file
+echo "安装完毕将自动退出" >> tmp_file
+echo "请耐心等待" >> tmp_file
+vim tmp_file -c "BundleInstall" -c "q" -c "q"
+rm tmp_file
 echo "安装完成"
