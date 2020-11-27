@@ -12,7 +12,7 @@ if which brew >/dev/null;then
     brew install vim ctags git astyle
 fi
 
-sudo apt-get install pip3
+sudo apt-get install python3-pip
 pip3 install autopep8 
 sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
 mv -f ~/vim ~/vim_old
